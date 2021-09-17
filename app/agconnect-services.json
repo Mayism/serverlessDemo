@@ -17,21 +17,21 @@
 	},
 	"client":{
 		"cp_id":"900086000150224722",
-		"product_id":"736430079244519263",
-		"client_id":"387383921915987072",
-		"client_secret":"1C79300696F55F78A216118576777AE08CBEBB0F749BEAC750B172AB98FA83EB",
-		"project_id":"736430079244519263",
-		"app_id":"102421805",
-		"api_key":"CV8Sb/Un0JDzgzgiGum7glgYqTHXYGSIq/CjMown3LeIhGqrGdyMatpb2ddXDsOnBLsZ0WcdiuFETquIVacbdP+3CVQF",
-		"package_name":"mayim.huawei"
+		"product_id":"737518067793565493",
+		"client_id":"717334815484951488",
+		"client_secret":"99D1A32319169304F80E6C2016F95F19200F65803085408D9916F0418AF0183A",
+		"project_id":"737518067793565493",
+		"app_id":"104744547",
+		"api_key":"CwEAAAAAVBTXwFeJ6h6udbhgQc61cW8p41z7eXV1s+9xWwJxlIFDrmpbMIjiHE9xX3hOBHCZw+gowKz51BaVNa6CpIN01g+AJ8s=",
+		"package_name":"com.huawei.covid19detection"
 	},
 	"oauth_client":{
-		"client_id":"102421805",
+		"client_id":"104744547",
 		"client_type":1
 	},
 	"app_info":{
-		"app_id":"102421805",
-		"package_name":"mayim.huawei"
+		"app_id":"104744547",
+		"package_name":"com.huawei.covid19detection"
 	},
 	"service":{
 		"analytics":{
@@ -43,7 +43,8 @@
 			"url":"https://search-drcn.cloud.huawei.com"
 		},
 		"cloudstorage":{
-			"storage_url":"https://agc-storage-drcn.platform.dbankcloud.cn"
+			"storage_url":"https://agc-storage-drcn.platform.dbankcloud.cn",
+			"default_storage":"covid-ocxm6"
 		},
 		"ml":{
 			"mlservice_url":"ml-api-drcn.ai.dbankcloud.com,ml-api-drcn.ai.dbankcloud.cn"
@@ -53,31 +54,17 @@
 	"configuration_version":"3.0",
 	"appInfos":[
 		{
-			"package_name":"com.testforrn",
+			"package_name":"com.huawei.covid19detection",
 			"client":{
-				"app_id":"103828841"
+				"app_id":"104744547"
 			},
 			"app_info":{
-				"package_name":"com.testforrn",
-				"app_id":"103828841"
+				"package_name":"com.huawei.covid19detection",
+				"app_id":"104744547"
 			},
 			"oauth_client":{
 				"client_type":1,
-				"client_id":"103828841"
-			}
-		},
-		{
-			"package_name":"mayim.huawei",
-			"client":{
-				"app_id":"102421805"
-			},
-			"app_info":{
-				"package_name":"mayim.huawei",
-				"app_id":"102421805"
-			},
-			"oauth_client":{
-				"client_type":1,
-				"client_id":"102421805"
+				"client_id":"104744547"
 			}
 		}
 	]
