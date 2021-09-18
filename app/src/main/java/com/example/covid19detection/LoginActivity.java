@@ -39,37 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         //用户不为空，打开主页面
         if(user!=null){
             openUserWindow();
-//            Intent intent = new Intent();
-//            intent.setClass(LoginActivity.this, MainwindowActivity.class);
-//            startActivity(intent);
         }
-
-
-//        findViewById(R.id.sendVeri).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String phoneNumberStr = editText_num.getText().toString().trim();
-//                VerifyCodeSettings settings = new VerifyCodeSettings.Builder()
-//                        .action(VerifyCodeSettings.ACTION_REGISTER_LOGIN)
-//                        .sendInterval(30)
-//                        .locale(Locale.CHINA)
-//                        .build();
-//                Task<VerifyCodeResult> task = AGConnectAuth.getInstance().requestVerifyCode(countryCodeStr, phoneNumberStr, settings);
-//                task.addOnSuccessListener(TaskExecutors.uiThread(), new OnSuccessListener<VerifyCodeResult>() {
-//                    @Override
-//                    public void onSuccess(VerifyCodeResult verifyCodeResult) {
-//                        //验证码申请成功
-//                        Toast.makeText(LoginActivity.this,"send phone verify code success",Toast.LENGTH_LONG).show();
-//                    }
-//                }).addOnFailureListener(TaskExecutors.uiThread(), new OnFailureListener() {
-//                    @Override
-//                    public void onFailure(Exception e) {
-//                        Toast.makeText(LoginActivity.this, "requestVerifyCode fail:" + e, Toast.LENGTH_SHORT).show();
-//                    }
-//                });
-//            }
-//        });
-
 
         findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,27 +66,17 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "register fail:" + e, Toast.LENGTH_SHORT).show();
                             }
                         });
-//                PhoneUser phoneUser = new PhoneUser.Builder()
-//                        .setCountryCode(countryCodeStr)
-//                        .setPhoneNumber(phoneNumberStr)
-//                        .setVerifyCode(vericode)
-//                        .build();
-//                AGConnectAuth.getInstance().createUser(phoneUser)
-//                        .addOnSuccessListener(new OnSuccessListener<SignInResult>() {
-//                            @Override
-//                            public void onSuccess(SignInResult signInResult) {
-//                                //创建帐号成功后，默认已登录,进入主页面
-//                                Intent intent = new Intent();
-//                                intent.setClass(LoginActivity.this, RegisterActivity.class);
-//                                startActivity(intent);
-//                            }
-//                        })
-//                        .addOnFailureListener(new OnFailureListener() {
-//                            @Override
-//                            public void onFailure(Exception e) {
-//                                Toast.makeText(LoginActivity.this, "register fail:" + e, Toast.LENGTH_SHORT).show();
-//                            }
-//                        });
+            }
+        });
+
+        findViewById(R.id.nologin).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    openRegisterWindow();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
             }
         });
     }
@@ -124,6 +84,12 @@ public class LoginActivity extends AppCompatActivity {
     public void openUserWindow(){
         Intent intent = new Intent();
         intent.setClass(LoginActivity.this, MainwindowActivity.class);
+        startActivity(intent);
+    }
+
+    public void openRegisterWindow(){
+        Intent intent = new Intent();
+        intent.setClass(LoginActivity.this, RegisterActivity.class);
         startActivity(intent);
     }
 }

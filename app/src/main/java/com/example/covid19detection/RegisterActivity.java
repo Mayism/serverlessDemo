@@ -27,6 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registeractivity);
         final EditText editText_num = findViewById(R.id.rephoneNumber);
+        final EditText repsd_txt = findViewById(R.id.repsdtext);
         final String countryCodeStr = "86";
         final EditText veri_code = findViewById(R.id.verifyCode);
 
@@ -60,10 +61,12 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String phoneNumberStr = editText_num.getText().toString().trim();
                 String vericode = veri_code.getText().toString().trim();
+                String rePsd = repsd_txt.getText().toString().trim();
                 PhoneUser phoneUser = new PhoneUser.Builder()
                         .setCountryCode(countryCodeStr)
                         .setPhoneNumber(phoneNumberStr)
                         .setVerifyCode(vericode)
+                        .setPassword(rePsd)
                         .build();
                 AGConnectAuth.getInstance().createUser(phoneUser)
                         .addOnSuccessListener(new OnSuccessListener<SignInResult>() {
