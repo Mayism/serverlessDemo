@@ -50,6 +50,8 @@ public class RegisterActivity extends AppCompatActivity {
                 }).addOnFailureListener(TaskExecutors.uiThread(), new OnFailureListener() {
                     @Override
                     public void onFailure(Exception e) {
+                        //失败就销户
+                        //AGConnectAuth.getInstance().deleteUser();
                         Toast.makeText(RegisterActivity.this, "requestVerifyCode fail:" + e, Toast.LENGTH_SHORT).show();
                     }
                 });

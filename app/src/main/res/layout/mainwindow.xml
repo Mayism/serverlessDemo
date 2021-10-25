@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
     tools:context=".MainwindowActivity">
 
     <TextView
@@ -12,9 +14,13 @@
         android:layout_height="wrap_content"
         android:width="300dp"
         android:height="30dp"
-        android:text="填报人姓名"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="194dp" />
+        android:text="申报人姓名"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26"/>
 
     <EditText
         android:id="@+id/nameinput"
@@ -31,7 +37,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.305" />
 
-
     <TextView
         android:id="@+id/region"
         android:layout_width="wrap_content"
@@ -39,8 +44,12 @@
         android:width="300dp"
         android:height="30dp"
         android:text="申报人地区"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="268dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36"/>
 
     <EditText
         android:id="@+id/regioninput"
@@ -64,9 +73,12 @@
         android:width="100dp"
         android:height="30dp"
         android:text="上传凭证"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="331dp" />
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47"/>
 
     <Button
         android:id="@+id/submit"
@@ -75,6 +87,10 @@
         android:width="160dp"
         android:height="30dp"
         android:text="提交"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="451dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
